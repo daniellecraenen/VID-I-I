@@ -18,7 +18,6 @@ function spin(){
 	
 	console.log(myOtherBox.object3D.rotation.x);
 	console.log(myOtherBox.object3D.rotation.y);
-	waar = true
 	}
 }
 
