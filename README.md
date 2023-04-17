@@ -27,14 +27,22 @@ Mijn startniveau is: BLAUW
 
   ### De eerste versie/schets:
   <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="eerste versie/schets">
+  
+  Mijn ontwerp concept zal gericht zijn op de evolutie van prinses Zelda uit Legends of Zelda. Ik heb onderzoek gedaan naar de game en de evolutie. Ik vind hierbij de evolutie die prinses, of nu Sheikah Zelda heeft doorgemaakt het meest interessant.
+
+Je ziet dat prinses Zelda uit het typische storytelling is ontstaan zoals die vroeger vaak werd verteld. Een prinses die gered moet worden, een slechterik en een superheld/prins die de prinses komt redden. Dit is dan ook de rode draad van Legends of Zelda. Door de jaren heen is dit steeds meer veranderd naar een stoere strijder die veel meer is dan een prinses die gered moet worden. Zo zie je dat dit met de behoeftes van die periodes zo is gaan vormen.
+
+Mijn concept is...
 
 
   ### Je ambitie: 
   Aan deze technieken/punten wil ik werken:
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - Ik wil mijn CSS weer bijspijkeren
+  - Ik wil leren animeren in CSS
+  - Ik wil sounds leren coderen
+  - Eventueel een beetje javascript leren
+  
+  Ik heb al wat mogen coderen, maar toch blijf ik dit erg lastig vinden. Daarom is het voor mij een doel om beter CSS te leren begrijpen en dit toe te kunnen passen. Daarbij wil ik graag animaties in CSS leren. Ik vind zelf persoonlijk dat dit je website er echt professioneel uit kan laten zien wat ik goed kan gebruiken ook in de toekomst. Daarbij wil ik leren werken met media queries aangezien deze goed bij mijn onderwerp passen van mijn concept. Als er daarna nog tijd over is is het misschien leuk om paar regeltjes javascript te leren!
  
 </details>
 
