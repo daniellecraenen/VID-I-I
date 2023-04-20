@@ -1,105 +1,75 @@
-// // JavaScript Document
+console.log("Howdy!");
 
-const links = document.querySelectorAll("nav a");
-const container = document.querySelector("ol");
-const cards = container.querySelectorAll("li");
+var links = document.querySelectorAll("nav a");
+var container = document.querySelector("ol");
+var bgimage = document.querySelector(".bg-container");
 
-// Functie om achtergrondafbeelding van body::before aan te passen
-const setBodyBackgroundImage = (bgImage) => {
-  document.body.style.backgroundImage = `url(${bgImage})`;
-};
+// lijst met variable met knoppen waarbij ik de 
+// functie aanroep bij het klikken van de knop.
 
-// Laad afbeelding van eerste element bij het openen van de website
-const firstBgImage = cards[0].dataset.bg;
-setBodyBackgroundImage(firstBgImage);
+var knop1 = document.querySelector("nav a:nth-of-type(1)");
+knop1.addEventListener("click", functieafbeelding1);
 
-// Scroll event handler
-const handleScroll = () => {
-  const windowHeight = window.innerHeight;
-  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+var knop2 = document.querySelector("nav a:nth-of-type(2)");
+knop2.addEventListener("click", functieafbeelding2);
 
-  cards.forEach((card) => {
-    const cardTop = card.getBoundingClientRect().top;
-    const cardHeight = card.offsetHeight;
-    const cardBottom = cardTop + cardHeight;
+var knop3 = document.querySelector("nav a:nth-of-type(3)");
+knop3.addEventListener("click", functieafbeelding3);
 
-    if (cardTop < windowHeight && cardBottom > 0) {
-      const bgImage = card.dataset.bg;
-      setBodyBackgroundImage(bgImage);
-    }
-  });
-};
+var knop4 = document.querySelector("nav a:nth-of-type(4)");
+knop4.addEventListener("click", functieafbeelding4);
 
-// Toevoegen van scroll event listener
-window.addEventListener("scroll", handleScroll);
+var knop5 = document.querySelector("nav a:nth-of-type(5)");
+knop5.addEventListener("click", functieafbeelding5);
 
-// Click event listeners voor navigatie-items
-links.forEach((link) => {
-  link.addEventListener("click", (event) => {
+
+// functies die de navigatie knoppen navigeren naar de juiste
+// list item.
+
+links.forEach(link => {
+    link.addEventListener("click", goToZelda);
+})
+
+function goToZelda(event) {
     event.preventDefault();
-    const deLink = event.target;
-    const deZelda = document.querySelector(deLink.hash);
+    let deLink = event.target;
+    let deZelda = document.querySelector(deLink.hash);
 
-    deZelda.scrollIntoView({
-      behavior: "smooth",
-      inline: "center",
-    });
+    deZelda.scrollIntoView( {
+        behavior: "smooth",
+        inline: "center"
+      } );
+}
 
-    // Aanroepen van setBodyBackgroundImage() met de bijbehorende data-bg van het aangeklikte navigatie-item
-    const bgImage = deLink.dataset.bg;
-    setBodyBackgroundImage(bgImage);
-  });
-});
+// funties die worden aangeroepen gekoppeld aan de CSS 
+// waardoor de afbeelding wordt aangepast.
 
-// Keyboard event listener voor het scrollen door de carousel
-document.addEventListener("keydown", (event) => {
-  const currentCard = document.querySelector(".active");
-  const nextCard = currentCard.nextElementSibling;
+function functieafbeelding1() {
+    bgimage.dataset.map = "image1";
 
-  if (event.key === "ArrowRight" && nextCard !== null) {
-    currentCard.classList.remove("active");
-    nextCard.classList.add("active");
+    console.log("hoi");
+}
 
-    const bgImage = nextCard.dataset.bg;
-    setBodyBackgroundImage(bgImage);
-  } else if (event.key === "ArrowLeft" && currentCard.previousElementSibling !== null) {
-    const prevCard = currentCard.previousElementSibling;
-    currentCard.classList.remove("active");
-    prevCard.classList.add("active");
+function functieafbeelding2() {
+    bgimage.dataset.map = "image2";
 
-    const bgImage = prevCard.dataset.bg;
-    setBodyBackgroundImage(bgImage);
-  }
-});
+    console.log("hoi2");
+}
 
+function functieafbeelding3() {
+    bgimage.dataset.map = "image3";
 
+    console.log("hoi3");
+}
 
+function functieafbeelding4() {
+    bgimage.dataset.map = "image4";
 
+    console.log("hoi4");
+}
 
+function functieafbeelding5() {
+    bgimage.dataset.map = "image5";
 
-
-
-
-
-
-// console.log("Howdy!");
-
-// var links = document.querySelectorAll("nav a");
-// var container = document.querySelector("ol");
-
-// links.forEach(link => {
-//     link.addEventListener("click", goToZelda);
-// })
-
-// function goToZelda(event) {
-//     event.preventDefault();
-//     let deLink = event.target;
-//     let deZelda = document.querySelector(deLink.hash);
-
-//     deZelda.scrollIntoView( {
-//         behavior: "smooth",
-//         inline: "center"
-//       } );
-// }
-
-
+    console.log("hoi5");
+}

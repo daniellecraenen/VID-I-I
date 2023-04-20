@@ -10,21 +10,6 @@
 body {
   margin:0;
   background-color: black;
-  transition: background-image 1s ease-in-out;
-
-}
-
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: rgba(0, 0, 0, 0.7);
 }
 
 button:not([disabled]) {
@@ -45,11 +30,20 @@ button:not([disabled]) {
 /* ALGEMENE STYLING */
 /********************/
 
+/* Verwijderen van verticale scrollbalken */
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+/* Verwijderen van horizontale scrollbalken */
+::-webkit-scrollbar {
+  height: 0px;
+}
+
 body {
   height:100vh;
   display:grid;
-  grid-template-rows: 1fr max-content 1fr;
-  overflow:hidden;
+  grid-template-rows: 1fr minmax(0, max-content) 1fr;
 }
 
 h1 {
@@ -61,25 +55,62 @@ h1 {
   justify-content: center;
 }
 
+/* de lege container waarin de background image aangepast wordt */
+
+.bg-container {
+  background-image: url(../images/map-1.png);
+  padding: 0;
+  margin: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: .3;
+  transition: background-image 1s ease-in-out;
+}
+
+.bg-container[data-map="image1"] {
+  background-image: url(../images/map-1.png);
+}
+
+.bg-container[data-map="image2"] {
+  background-image: url(../images/map-2.png);
+}
+
+.bg-container[data-map="image3"] {
+  background-image: url(../images/map-3.png);
+}
+
+.bg-container[data-map="image4"] {
+  background-image: url(../images/map-4.jpeg);
+}
+
+.bg-container[data-map="image5"] {
+  background-image: url(../images/map-5.png);
+}
+
 /* De platenalbums */
 
 ol {
-  width:100vw;
+  width: 100vw;
   padding: 0 calc(50vw - 15em);
   margin: 0;
   list-style: none;
 
   display: flex;
-  gap:calc(50vw - 30em);
-  overflow: hidden;
-  /* white-space: nowrap; --> is de default */
+  gap: calc(50vw - 30em);
   align-items: center;
 
-  /* background-color: yellow; */
-
-  scroll-behavior: smooth;
+  /* scroll-behavior: smooth; */
   scroll-snap-type: x mandatory;
+
+  overflow: visible; /*Kan dit niet anders? */
 }
+
 
 li {
   background-color: blueviolet;
@@ -88,19 +119,51 @@ li {
   height: 30em;
 
   scroll-snap-align: center;
-  /* transition: transform 0.5s ease; */
+  background-image: url("../images/favicon.svg");
 }
 
-/* .carousel-image {
+/* images in de list items met een image erachter van
+een vynil plaat die als je hovert naar boven komt */
+
+
+/* .hover-container {
+  background-size: cover;
+  height: auto;
   width: 100%;
-  height: 100%;
+  display: flex;
+  justify-content: center;
 }
 
-.active .carousel-image {
-  width: 150%;
-  height: 150%;
+.hover-container img.hoverplaat:hover {
+  position: relative;
+  transform: translateY(-1em);
+}
+
+.hover-container img {
+  width: 90%;
+  padding-bottom: 0;
 } */
 
+/* .hoveren {
+  position: relative;
+}
+
+.hoverplaat {
+  position: fixed;
+  top: 50%;
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  width: 32%;
+  height: auto;
+}
+
+.hoveralbum {
+  opacity: .5;
+}
+
+.hoveren:hover .hoverplaat {
+  top: 40%;
+} */
 
 /* De scroll bolletjes */
 
@@ -141,3 +204,25 @@ nav a:hover {
 }
 
 
+#element1, #element2, #element3, #element4, #element5 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: .5; /* zonder opacity doet die het niet */
+  overflow: visible;
+}
+
+.plaat {
+  background-image: url("../images/langspeelplaat.png");
+  background-size: 100% 100%;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+
+.plaat:hover {
+  position: relative;
+  padding-bottom: 2em;
+  top: -15%;
+}
