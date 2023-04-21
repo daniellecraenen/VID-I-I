@@ -30,16 +30,6 @@ button:not([disabled]) {
 /* ALGEMENE STYLING */
 /********************/
 
-/* Verwijderen van verticale scrollbalken */
-::-webkit-scrollbar {
-  width: 0px;
-}
-
-/* Verwijderen van horizontale scrollbalken */
-::-webkit-scrollbar {
-  height: 0px;
-}
-
 body {
   height:100vh;
   display:grid;
@@ -49,10 +39,14 @@ body {
 h1 {
   color:var(--color-headings);
   margin:0;
-  padding: 1em;
+  padding-top: 1.2em;
 
   display: flex;
   justify-content: center;
+}
+
+main {
+  padding-bottom:4.5em;
 }
 
 /* de lege container waarin de background image aangepast wordt */
@@ -93,11 +87,11 @@ h1 {
   background-image: url(../images/map-5.png);
 }
 
-/* De platenalbums */
+/* List items platenalbums */
 
 ol {
   width: 100vw;
-  padding: 0 calc(50vw - 15em);
+  padding: 4.5em calc(50vw - 15em) 0;
   margin: 0;
   list-style: none;
 
@@ -105,65 +99,21 @@ ol {
   gap: calc(50vw - 30em);
   align-items: center;
 
-  /* scroll-behavior: smooth; */
   scroll-snap-type: x mandatory;
 
-  overflow: visible; /*Kan dit niet anders? */
+  overflow: hidden;
 }
 
 
 li {
+  position: relative;
   background-color: blueviolet;
   
   aspect-ratio: 1/1;
   height: 30em;
 
   scroll-snap-align: center;
-  background-image: url("../images/favicon.svg");
 }
-
-/* images in de list items met een image erachter van
-een vynil plaat die als je hovert naar boven komt */
-
-
-/* .hover-container {
-  background-size: cover;
-  height: auto;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.hover-container img.hoverplaat:hover {
-  position: relative;
-  transform: translateY(-1em);
-}
-
-.hover-container img {
-  width: 90%;
-  padding-bottom: 0;
-} */
-
-/* .hoveren {
-  position: relative;
-}
-
-.hoverplaat {
-  position: fixed;
-  top: 50%;
-  left: 50%; 
-  transform: translate(-50%, -50%);
-  width: 32%;
-  height: auto;
-}
-
-.hoveralbum {
-  opacity: .5;
-}
-
-.hoveren:hover .hoverplaat {
-  top: 40%;
-} */
 
 /* De scroll bolletjes */
 
@@ -203,26 +153,51 @@ nav a:hover {
   background-color: blueviolet;
 }
 
+/* De list items afbeeldingen en de bijhorende hover functie
+die de gebruiker feedback geven dat het klikbaar is. */
 
-#element1, #element2, #element3, #element4, #element5 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: .5; /* zonder opacity doet die het niet */
-  overflow: visible;
+li div,
+li button {
+  appearance: none;
+  border:none;
+  background: none;
+  font-size: 1em;
+
+  position: absolute;
+  width:100%;
+  height:100%;
+  top:0;
+  left:0;
+  background-size: 100% 100%;
 }
+
+.cover1 {
+  background-image: url("../images/favicon.svg");
+}
+
+.cover2 {
+  background-image: url("../images/favicon.svg");
+}
+
+.cover3 {
+  background-image: url("../images/favicon.svg");
+}
+
+.cover4 {
+  background-image: url("../images/favicon.svg");
+}
+
+.cover5 {
+  background-image: url("../images/favicon.svg");
+}
+
 
 .plaat {
   background-image: url("../images/langspeelplaat.png");
-  background-size: 100% 100%;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
+  transition: 0.5s;
 }
 
 
-.plaat:hover {
-  position: relative;
-  padding-bottom: 2em;
-  top: -15%;
+li:has(.cover1:hover, .cover2:hover, .cover3:hover, .cover4:hover, .cover5:hover) .plaat {
+  transform: translateY(-4.5em);
 }

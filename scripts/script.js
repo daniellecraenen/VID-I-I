@@ -1,5 +1,7 @@
 console.log("Howdy!");
 
+// VARIABLES
+
 var links = document.querySelectorAll("nav a");
 var container = document.querySelector("ol");
 var bgimage = document.querySelector(".bg-container");
@@ -21,6 +23,14 @@ knop4.addEventListener("click", functieafbeelding4);
 
 var knop5 = document.querySelector("nav a:nth-of-type(5)");
 knop5.addEventListener("click", functieafbeelding5);
+
+// variabelen geluid afspelen hoveren
+
+var hoverArea1 = document.querySelector('li:nth-of-type(1)');
+var audioElement1 = document.getElementById('audio-element');
+ 
+
+// FUNTIONS
 
 
 // functies die de navigatie knoppen navigeren naar de juiste
@@ -73,3 +83,22 @@ function functieafbeelding5() {
 
     console.log("hoi5");
 }
+
+
+var slideIndex = 1;
+
+function slide(n) {
+  showSlides(slideIndex += n);
+}
+
+
+// audio afspelen bij hoveren
+
+hoverArea1.addEventListener('mouseover', () => {
+    audioElement1.play();
+});
+
+hoverArea1.addEventListener('mouseout', () => {
+    audioElement1.pause();
+    audioElement1.currentTime = 0;
+});
