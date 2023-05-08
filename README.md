@@ -174,7 +174,7 @@ Ik heb al wat mogen coderen, maar toch blijf ik dit erg lastig vinden. Daarom is
 
   Toch ben ik wel blij dat ik hier en daar al wat begin te begrijpen!
 
-  <img src="readme-images/reflectielastig1" width="375px" alt="bummer">
+  <img src="readme-images/reflectielastig1.png" width="375px" alt="bummer">
 </details>
 
 
