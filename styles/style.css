@@ -29,6 +29,7 @@ button:not([disabled]) {
 :root {
   --font-site: 'Zelda', sans-serif, Arial;
   --color-headings:crimson;
+  --color-backup: black;
 	
 	--dialog-gradient: linear-gradient(#000c, #0009 60%, #0000);
 	--dialog-clr:white;
@@ -44,7 +45,7 @@ button:not([disabled]) {
 
 body {
   margin:0;
-  background-color: black;
+  background-color: var(--color-backup);
   height:100vh;
   display:grid;
   grid-template-rows: 1fr minmax(0, max-content) 1fr;
@@ -85,7 +86,7 @@ main {
 	background-image:url(../images/zelda_introdia.jpeg);
 	background-size:cover;
 	border:none;
-	box-shadow:0 0 1em #000;
+	box-shadow:0 0 1em var(--color-backup);
 }
 
 /* translucent layer covering the page */
@@ -187,7 +188,7 @@ html:has(#intro_dialog[open]) {
 
 li {
   position: relative;
-  background-color: blueviolet;
+  background-color: var(--color-backup);
   
   aspect-ratio: 1/1;
   height: 30em;
@@ -339,10 +340,6 @@ li:has(.cover1:hover, .cover2:hover, .cover3:hover, .cover4:hover, .cover5:hover
   backdrop-filter:blur(2em);
 }
 
-/* #elements form {	
-	background-image: url("../images/background_puzzel.png");
-} */
-
 /* div met daarin h2 en p */
 .elements form div {
 	display: flex;
@@ -385,11 +382,11 @@ li:has(.cover1:hover, .cover2:hover, .cover3:hover, .cover4:hover, .cover5:hover
 
 	appearance:none;
 	background:none;
-	border:solid .1em black;
+	border:solid .1em var(--color-backup);
 	
 	font-size:2em;
 	font-weight:bold;
-	color:black;
+	color:var(--color-backup);
 }
 
 /* BUTTON PUZZEL 1 */
@@ -645,7 +642,7 @@ html:has(.elements[open]) {
 
 .informations form p {
   font-size: x-large;
-  color: black;
+  color: var(--color-backup);
 
   margin-top: 10em;
   padding-left: 4em;
@@ -674,9 +671,9 @@ html:has(.elements[open]) {
 
 	appearance:none;
 	background:none;
-	border:solid .1em black;
+	border:solid .1em var(--color-backup);
 	
 	font-size:2em;
 	font-weight:bold;
-	color:black;
+	color:var(--color-backup);
 }

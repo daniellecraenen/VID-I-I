@@ -348,9 +348,6 @@ function openInfoDialog2(event) {
     startAnimation2();
 
     setTimeout(() => {
-        // var button = document.querySelector('#element2 .go_info2');
-        // button.classList.remove('animate-before');
-
         puzzelDialog2.close(); // Sluit de huidige dialoog
         infoDialog2.showModal();
         console.log("ik ga open!");

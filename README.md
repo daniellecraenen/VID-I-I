@@ -86,26 +86,31 @@ Ik heb al wat mogen coderen, maar toch blijf ik dit erg lastig vinden. Daarom is
 
 <details>
   <summary>Mijn bevindingen + wijzigingen</summary>
-  <img src="readme-images/schetsen-concept.png" width="375px" alt="eerste versie/schets">
+  <img src="readme-images/feedbackjulia1.png" width="375px" alt="feedbackmoment2">
+  <img src="readme-images/feedbackjulia2.png" width="375px" alt="feedbackmoment2">
   
   ### Bevinding 1:
-  Omschrijving van wat er nog niet orde was (tekst en afbeeding(en)).
+   <img src="readme-images/feedbackverzorging2.png" width="375px" alt="feedbackmoment2">
+  Op moment van het feedback had ik mij nog niet bezig gehouden met het mooi maken van de website. Het was puur functionaliteit. Ik had daarom hier niet een goede beoordeling van. Wat ik ook begrijp!
 
   #### oplossing:
-  Beschrijving hoe je het hebt hebt opgelost of als het niet gelukt is hoe je het zou oplossen (tekst en afbeeding(en)).
+  Ik ben bezig geweest met de huisstijl van Legend of Zelda en heb hier een kleurenpalet op uitgekozen. Ik heb ook alle album covers, puzzels en info pagina's consistent gemaakt op zelda en het kleurenpalet!
 
 
 
   ### Bevinding 2:
-  Omschrijving van wat er nog niet orde was (tekst en afbeeding(en)).
+  Ik had nog de basis font verwerkt in mijn website. Deze is niet gebasseerd op mijn gekozen thema.
 
   #### oplossing:
-  Beschrijving hoe je het hebt hebt opgelost of als het niet gelukt is hoe je het zou oplossen (tekst en afbeeding(en)).
+  Ik heb gekeken naar de font die Legend of Zelda gebruikt en een vergelijkbare uitgekozen. Ik heb niet dezelfde font aangezien deze betaald was.
 
 
 
   ### Bevinding 3:
-  ...
+  Op het moment van het feedback had ik nog geen custom properties. Ik had daarom de feedback gekregen om hier naar te kijken!
+
+  #### oplossing:
+  Ik heb custom properties toegepast in mijn code waarvan ik dacht dat het goed van pas kon zijn!
 
 </details>
 
@@ -116,25 +121,15 @@ Ik heb al wat mogen coderen, maar toch blijf ik dit erg lastig vinden. Daarom is
 
 <details>
   <summary>Mijn bevindingen + wijzigingen</summary>
+
+  ### Isabelle haar feedback op mijn eind versie:
+  Ontzettend origineel idee en ook heel origineel uitgewerkt. Je hebt je tijdlijn super interactief gemaakt. Je kan swipen, op van alles klikken en je hebt zelfs een puzzel toegevoegd. De look en feel past ook goed bij je onderwerp. Je code is duidelijk en je kan zien dat je er veel moeite in hebt gestopt. Het enige wat ik kan bedenken is dat je misschien extra comments kan toevoegen voor jezelf, ookal doe je dit al goed! Ik heb er verder echt niks op aan te merken. Heel goed bezig!
   
   ### Bevinding 1:
-  Omschrijving van wat er nog niet orde was (tekst en afbeeding(en)).
+  Ik heb als feedback gekregen dat ik nog extra kan kijken naar comments die het voor mij nog duidelijker kunnen maken.
 
   #### oplossing:
-  Beschrijving hoe je het hebt hebt opgelost of als het niet gelukt is hoe je het zou oplossen (tekst en afbeeding(en)).
-
-
-
-  ### Bevinding 2:
-  Omschrijving van wat er nog niet orde was (tekst en afbeeding(en)).
-
-  #### oplossing:
-  Beschrijving hoe je het hebt hebt opgelost of als het niet gelukt is hoe je het zou oplossen (tekst en afbeeding(en)).
-
-
-
-  ### Bevinding 3:
-  ...
+  Ik heb comments toegevoegd op plekken van code die ik nog lastig vind.
 
 </details>
 
@@ -147,19 +142,39 @@ Ik heb al wat mogen coderen, maar toch blijf ik dit erg lastig vinden. Daarom is
   <summary>Mijn eindresultaat & persoonlijke ontwikkeling</summary>
 
   ### Je uitkomst - karakteristiek screenshot(s):
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="final ontwerp">
+  <img src="readme-images/homepagina.png" width="375px" alt="final ontwerp">
+  <img src="readme-images/puzzelscherm.png" width="375px" alt="final ontwerp">
+  <img src="readme-images/infoscherm.png" width="375px" alt="final ontwerp">
+
+  Wat ik leuk vind om terug te zien in deze read me is hoe ik van een concept in mijn schetsboek, nu ben gekomen op een werkende website!
+  Voor mij is coderen zeker een uitdaging en heb ik altijd erg lastig gevonden. Toch zie ik dat ik in deze korte periode enorm gegroeid ben! Ik heb zo ook al mijn ambities aangetikt! Ik heb zeker mijn CSS bijgespijkerd, zelfs heel veel meer geleerd dan dat. Het animeren in CSS is mij ook goed afgegaan. Ik heb bij iedere puzzel gebruik kunnen maken van keyframes. Wat is het leuk om te zien hoe dat tot leven komt! Al was het zeker niet zonder slag of stoot...het is me gelukt!
+  Ik heb ook veel gebruik gemaakt van sounds in mijn website. Zo is natuurlijk mijn hele concept daarop gebasseerd! Een mooi en leuk iets om te zien hoe erg tot leven mijn website daarvan kwam! En natuurlijk nogsteeds levendig!
+  Waar ik denk ik het meest trots op ben is het feit dat ik javascript heb leren schrijven. Ik heb daar wel erg veel hulp bij gekregen... toch begin ik het wel te begrijpen in de grote lijnen! Dat had ik paar weken geleden nooit verwacht.
+  Ik kan daarom wel zeggen voor mij dat dit een geslaagd project is!
 
 
   ### Dit ging goed/Heb ik geleerd: 
-  Korte omschrijving met plaatje(s)
+  Het ging mij goed af om steeds meer CSS te leren. Zo heb ik leren werken met 
+  - pseudomeinen
+  - indexen
+  - custom properties
+  - keyframes
+  - containers
+  - en nog veel meer!
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
+  <img src="readme-images/reflectiegoed1.png" width="375px" alt="top">
+  <img src="readme-images/reflectiegoed2.png" width="375px" alt="top">
+  <img src="readme-images/reflectiegoed3.png" width="375px" alt="top">
 
 
   ### Dit was lastig/Is niet gelukt:
-  Korte omschrijving met plaatje(s)
+  Wat voor mij lastig was, was javascript. Dit had ik ook wel verwacht aangezien dit de eerste keer is dat ik met javascript heb gecodeerd. Ik heb daarom hierbij heel veel hulp gekregen. Ik kan deze code ook niet op mezelf schrijven.
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
+  Daardoor was het ook gekomen dat mijn code uiteindelijk kapot was gegaan doordat er teveel in werd geprobeerd waarvan ik zelf niet begreep wat er gedaan werd. Dit was even lastig en frustrerend. Gelukkig ben ik hier uiteindelijk uit geholpen en kon ik toen door!
+
+  Toch ben ik wel blij dat ik hier en daar al wat begin te begrijpen!
+
+  <img src="readme-images/reflectielastig1" width="375px" alt="bummer">
 </details>
 
 
@@ -175,11 +190,28 @@ Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg).
 1. https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 2. https://codepen.io/shooft/pen/abmLPwy
 3. https://nl.wikipedia.org/wiki/Langspeelplaat (voor afbeelding)
-4. https://github.com/Jobbie20/VIDii (voor inspiratie plaatjes)
+4. https://github.com/Jobbie20/VIDii (voor inspiratie)
 5. https://codepen.io/shooft/pen/LYgxoMO
 6. https://codepen.io/shooft/pen/jOeyxev
 7. https://codepen.io/shooft/pen/PoyWMWb
 8. https://fontmeme.com/fonts/the-wild-breath-of-zelda-font/#previewtool
-9. 
+9. https://www.istockphoto.com/nl/foto/stone-wall-gm521079280-91225453 (afbeelding)
+10. https://www.deviantart.com/jzkart/art/3D-Game-Prop-Lever-598734165 (afbeelding)
+11. https://zelda.fandom.com/wiki/Treasure_Chest (afbeelding)
+12. https://www.ign.com/wikis/the-legend-of-zelda-skyward-sword/Zelda (afbeelding)
+13. https://zelda.fandom.com/wiki/Princess_Zelda (afbeeldingen)
+14. https://en.wikipedia.org/wiki/Princess_Zelda (afbeelding)
+15. https://www.youtube.com/watch?v=ncg72VswyTs (muziek)
+16. https://www.youtube.com/watch?v=YHO6EDIbGlk (muziek)
+17. https://www.youtube.com/watch?v=137YvPWp0jI (muziek)
+18. https://www.youtube.com/watch?v=v4ReyoNpyrM (muziek)
+19. https://www.youtube.com/watch?v=cPWBG6_jn4Y (muziek)
+20. https://scribblenauts.fandom.com/wiki/Wooden_Cage (afbeelding)
+21. https://www.pngwing.com/en/free-png-knclo (afbeelding)
+22. https://zelda.fandom.com/wiki/Shadow_Beast (afbeelding)
+23. https://www.istockphoto.com/nl/foto/sand-background-gm519045458-90345889?phrase=zand (afbeelding)
+24. https://www.istockphoto.com/nl/vector/vuur-vlam-icoon-ge%C3%AFsoleerde-vuurteken-emoticon-vlam-symbool-ge%C3%AFsoleerd-op-wit-vuur-gm1137962021-303628328 (afbeelding)
+25. gratis afbeelding en veel chat gpt ter ondersteuning :)
+
 
 </details>
