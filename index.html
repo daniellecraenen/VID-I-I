@@ -9,7 +9,7 @@
 	<title>VIDii 2022/23 - Tijdlijn</title>
 	
 	<link href="styles/style.css" rel="stylesheet">
-	<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+	<link rel="icon" type="image/svg+xml" href="images/zelda_1986.png">
 </head>
 
 <body>
@@ -17,58 +17,209 @@
 		<h1>Ballads of Zelda</h1>
 	</header>
 
-	<main>
-		<!-- de tijdlijn zelf is een ordered list -->
+	<dialog id="intro_dialog">
+		<form method="dialog">
+			  <h2>Enjoy my timeline!</h2>
+		  <button type="submit">Let's go!</button>
+		</form>
+	</dialog>
 
-		<!-- elk list-item is een punt in tijd -->
-		
-		<!-- in elk listitem staat nu een link -->
+	<main>
+		<!-- De container voor de background images -->
 		<div class="bg-container" id="bg-container">
 		</div>
 
-		<ol>
-			<li id="element1">
+		<ol class="albums">
+			<li id="element1" data-bg="image1">
 				<div class="plaat"></div>
 				<button class="cover1"></button>
-				<audio id="audio-element" src="sounds/zelda-test.mp3" preload="auto"></audio>
-				<a href="#"></a>
+				<audio id="audio-element1" src="sounds/overworld_cover1.mp3" preload="auto"></audio>
+
+				<dialog class="elements">
+					<form method="dialog">
+						<!-- een div is toegestaan om de h2 en p samen op een plek te kunnen zetten -->
+						<div>
+							<h2>Solve the puzzel...</h2>
+						</div>
+						<img src="images/puzzel1.png" alt="background" />
+						<button class= "sluit" type="submit" aria-label="sluit lime">X</button>
+						<button class="go_info1" type="button" aria-label="go to info"></button>
+					</form>
+				</dialog>
+
+				<dialog class="informations">
+					<form method="dialog">
+						<!-- een div is toegestaan om de h2 en p samen op een plek te kunnen zetten -->
+						<h2>Prinses Zelda 1986</h2>
+						<div>
+							<img src="images/zelda_1986.png" alt="zelda_1986" />
+							<p>Prinses Zelda is een iconisch personage in de geschiedenis van videogames, vooral bekend uit de legendarische serie "The Legend of Zelda". Haar eerste verschijning was in het oorspronkelijke spel "The Legend of Zelda" uit 1986, waarin ze de typische prinses was die gered moest worden als onderdeel van het klassieke "hero's journey".<br><br>
+
+								Het nummer "Overworld Theme" uit hetzelfde spel is ook een onvergetelijk onderdeel van de Zelda-franchise geworden. Het is een levendig en aanstekelijk deuntje dat de spelers vergezelt tijdens hun verkenning van de wereld van Hyrule.<br><br>
+								
+								In de context van het spel is de verschijning van Prinses Zelda cruciaal voor de plot en de motivatie van Link om Ganon te verslaan en haar te redden. Haar karakter en haar band met Link zijn belangrijke aspecten van de Zelda-mythologie en hebben in de loop der jaren de verbeelding van gamers over de hele wereld gevangen genomen.<br><br>
+								
+								Het nummer "Overworld Theme" versterkt dit gevoel van avontuur en opwinding. Het heeft een heroïsche en opbeurende sfeer die perfect past bij de reis die Link onderneemt om Hyrule te redden en de prinses te beschermen. Het nummer is inmiddels uitgegroeid tot een van de meest herkenbare en iconische thema's in de gamewereld.</p>
+						</div>
+						<button class= "sluit" type="submit" aria-label="sluit lime">X</button>
+					</form>
+				</dialog>
+
 			</li>
-			<li id="element2">
+
+
+			<li id="element2" data-bg="image2">
 				<div class="plaat"></div>
 				<button class="cover2"></button>
+				<audio id="audio-element2" src="sounds/lullaby_cover2.mp3" preload="auto"></audio>
+				
+				<dialog class="elements">
+					<form method="dialog">
+						<!-- een div is toegestaan om de h2 en p samen op een plek te kunnen zetten -->
+						<div>
+							<h2>Solve the puzzel...</h2>
+						</div>
+						<img src="images/puzzel2.png" alt="background" />
+						<button class= "sluit" type="submit" aria-label="sluit lime">X</button>
+						<button class="go_info2" type="button" aria-label="go to info"></button>
+					</form>
+				</dialog>
 
-				<a href="#"></a>
+				<dialog class="informations">
+					<form method="dialog">
+						<!-- een div is toegestaan om de h2 en p samen op een plek te kunnen zetten -->
+						<h2>Prinses Zelda 1998</h2>
+						<div>
+							<img src="images/zelda_1998.png" alt="zelda_1998" />
+							<p>In deze game is Zelda niet langer alleen de typische prinses die gered moet worden, maar een sterker en invloedrijker personage met een belangrijke rol in de plot.<br><br>
+
+								Het nummer "Zelda's Lullaby" uit hetzelfde spel is ook een onvergetelijk onderdeel van de Zelda-franchise geworden. Het is een prachtig en rustgevend deuntje dat door Prinses Zelda wordt gespeeld op haar harp en vaak als belangrijk motief in de game dient.<br><br>
+								
+								In de context van het spel is de verschijning van Prinses Zelda als een mysterieuze figuur, die zich aan Link openbaart in visioenen en aanwijzingen geeft om de wereld van Hyrule te redden van de kwade invloeden van Ganondorf. Haar karakter en haar band met Link zijn belangrijke aspecten van de Zelda-mythologie en hebben in de loop der jaren de verbeelding van gamers over de hele wereld gevangen genomen.<br><br>
+								
+								Het nummer "Zelda's Lullaby" versterkt de ontroerende band tussen Link en Prinses Zelda. Het is een melodieus en emotioneel nummer dat de essentie van hun relatie vastlegt en hun avontuurlijke reis door de wereld van Hyrule versterkt. Het is een van de meest herkenbare en geliefde thema's in de gamewereld en roept bij veel gamers nog steeds nostalgische gevoelens op.</p>
+						</div>
+						<button class= "sluit" type="submit" aria-label="sluit lime">X</button>
+					</form>
+				</dialog>
 			</li>
-			<li id="element3">
+
+
+			<li id="element3" data-bg="image3">
 				<div class="plaat"></div>
 				<button class="cover3"></button>
+				<audio id="audio-element3" src="sounds/midna_cover3.mp3" preload="auto"></audio>
 
-				<a href="#"></a>
+				<dialog class="elements">
+					<form method="dialog">
+						<!-- een div is toegestaan om de h2 en p samen op een plek te kunnen zetten -->
+						<div>
+							<h2>Solve the puzzel...</h2>
+						</div>
+						<img src="images/puzzel3.png" alt="background" />
+						<button class= "sluit" type="submit" aria-label="sluit lime">X</button>
+						<button class="go_info3" type="button" aria-label="go to info"></button>
+					</form>
+				</dialog>
+
+				<dialog class="informations">
+					<form method="dialog">
+						<!-- een div is toegestaan om de h2 en p samen op een plek te kunnen zetten -->
+						<h2>Prinses Zelda 2006</h2>
+						<div>
+							<img src="images/zelda_2006.png" alt="zelda_2006" />
+							<p>Zelda haar verschijning in "The Legend of Zelda: Twilight Princess" uit 2006 is een van haar meest memorabele. In deze game is Zelda niet de belangrijkste focus, maar wordt ze vervangen door de mysterieuze Midna.<br><br>
+
+								Het nummer "Midna's Lament" uit hetzelfde spel is een prachtig en droevig deuntje dat past bij de sombere en emotionele sfeer van de game. Het wordt vaak gespeeld tijdens de tragische momenten in het verhaal.<br><br>
+								
+								In de context van het spel is de verschijning van Prinses Zelda beperkt tot het begin van de game, waar ze Link voorbereidt op zijn avontuur en hem de kracht geeft die hij nodig heeft om het kwaad te bestrijden. De rol van Prinses Zelda in het verhaal is beperkt, maar haar invloed is duidelijk voelbaar in de motivatie en acties van Link.<br><br>
+								
+								Het nummer "Midna's Lament" versterkt de sombere en emotionele sfeer van de game en weerspiegelt de tragedie en opofferingen van de personages. Het is een van de meest ontroerende en gedenkwaardige thema's in de gamewereld en roept bij veel gamers nog steeds nostalgische gevoelens op.</p>
+						</div>
+						<button class= "sluit" type="submit" aria-label="sluit lime">X</button>
+					</form>
+				</dialog>
 			</li>
-			<li id="element4">
+
+			<li id="element4" data-bg="image4">
 				<div class="plaat"></div>
 				<button class="cover4"></button>
+				<audio id="audio-element4" src="sounds/ballad_cover4.mp3" preload="auto"></audio>
 
-				<a href="#"></a>
+				<dialog class="elements">
+					<form method="dialog">
+						<!-- een div is toegestaan om de h2 en p samen op een plek te kunnen zetten -->
+						<div>
+							<h2>Solve the puzzel...</h2>
+						</div>
+						<img src="images/puzzel4.png" alt="background" />
+						<button class= "sluit" type="submit" aria-label="sluit lime">X</button>
+						<button class="go_info4" type="button" aria-label="go to info"></button>
+					</form>
+				</dialog>
+
+				<dialog class="informations">
+					<form method="dialog">
+						<!-- een div is toegestaan om de h2 en p samen op een plek te kunnen zetten -->
+						<h2>Prinses Zelda 2011</h2>
+						<div>
+							<img src="images/zelda_2011.png" alt="zelda_2011" />
+							<p>In deze game speelt ze een sleutelrol in het verhaal als de incarnatie van de godin Hylia.<br><br>
+
+								Het nummer "Ballad of the Goddess" uit hetzelfde spel is een krachtige en majestueuze compositie die het thema van de godin Hylia weerspiegelt. Het wordt vaak gespeeld tijdens de belangrijkste momenten in het verhaal en heeft een unieke sfeer die de game kenmerkt.<br><br>
+								
+								In de context van het spel is de verschijning van Prinses Zelda als de incarnatie van de godin Hylia cruciaal voor het verhaal en de motivatie van Link om te vechten tegen het kwaad. Haar karakter en haar band met Link zijn belangrijke aspecten van de Zelda-mythologie en hebben in de loop der jaren de verbeelding van gamers over de hele wereld gevangen genomen.<br><br>
+								
+								Het nummer "Ballad of the Goddess" versterkt de goddelijke en majestueuze sfeer van de game en weerspiegelt de kracht van de godin Hylia en haar band met Prinses Zelda. Het is een van de meest indrukwekkende en inspirerende thema's in de gamewereld en heeft een blijvende indruk achtergelaten op veel gamers.</p>
+						</div>
+						<button class= "sluit" type="submit" aria-label="sluit lime">X</button>
+					</form>
+				</dialog>
 			</li>
-			<li id="element5">
+
+			<li id="element5" data-bg="image5">
 				<div class="plaat"></div>
 				<button class="cover5"></button>
+				<audio id="audio-element5" src="sounds/breath_cover5.mp3" preload="auto"></audio>
 
-				<a href="#"></a>
+				<dialog class="elements">
+					<form method="dialog">
+						<!-- een div is toegestaan om de h2 en p samen op een plek te kunnen zetten -->
+						<div>
+							<h2>Solve the puzzel...</h2>
+						</div>
+						<img src="images/puzzel5.png" alt="background" />
+						<button class= "sluit" type="submit" aria-label="sluit lime">X</button>
+						<button class="go_info5" type="button" aria-label="go to info"></button>
+					</form>
+				</dialog>
+
+				<dialog class="informations">
+					<form method="dialog">
+						<!-- een div is toegestaan om de h2 en p samen op een plek te kunnen zetten -->
+						<h2>Prinses Zelda 2017-2022</h2>
+						<div>
+							<img src="images/zelda_2017-2022.png" alt="zelda_2017-2022" />
+							<p>Prinses Zelda is een iconisch personage in de "The Legend of Zelda" franchise. Haar verschijning in "The Legend of Zelda: Breath of the Wild" uit 2017 is opvallend, omdat ze niet langer de traditionele rol van 'damsel in distress' heeft. In plaats daarvan is ze een getalenteerde wetenschapper en strijder die vecht om haar koninkrijk te beschermen tegen de invasie van Calamity Ganon.<br><br>
+
+								Het nummer "Breath of the Wild" uit dezelfde game weerspiegelt de open wereld van Hyrule en versterkt de avontuurlijke sfeer van de game. Het heeft een rustige en contemplatieve sfeer die de spelers aanmoedigt om te verkennen en de schoonheid van de wereld te ontdekken. Het is een van de meest kenmerkende en herkenbare thema's in de gamewereld.<br><br>
+								
+								Zelda's karakter en haar band met Link zijn belangrijke aspecten van de Zelda-mythologie en hebben de verbeelding van gamers over de hele wereld gevangen genomen. In tegenstelling tot eerdere spellen heeft Zelda in "Breath of the Wild" haar eigen hero's journey als wetenschapper en strijder, en speelt ze een cruciale rol in het verhaal.</p>
+						</div>
+						<button class= "sluit" type="submit" aria-label="sluit lime">X</button>
+					</form>
+				</dialog>
 			</li>
+
 		</ol>
 		<nav>
-			<a href="#element1"></a>
-			<a href="#element2"></a>
-			<a href="#element3"></a>
-			<a href="#element4"></a>
-			<a href="#element5"></a>
+			<a href="#element1" aria-current="true" aria-label="go to element1"></a>
+			<a href="#element2" aria-label="go to element2"></a>
+			<a href="#element3" aria-label="go to element3"></a>
+			<a href="#element4" aria-label="go to element4"></a>
+			<a href="#element5" aria-label="go to element5"></a>
 		  </nav>		  
 	</main>
-
-	<!-- Hier komen de nieuwe kaarten stuk voor stuk
-	als list items net zoals in de main!-->
 
 	<script src="scripts/script.js"></script>
 </body>
