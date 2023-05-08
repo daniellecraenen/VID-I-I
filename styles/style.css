@@ -4,12 +4,8 @@
 
 /* naar een idee van Jen Simmons */
 *, *::after, *::before {
-  box-sizing:border-box;  
-}
-
-body {
-  margin:0;
-  background-color: black;
+  box-sizing:border-box;
+  font-family:var(--font-site);
 }
 
 button:not([disabled]) {
@@ -21,16 +17,34 @@ button:not([disabled]) {
 /* CUSTOM PROPERTIES */
 /*********************/
 
-:root {
-  --color-headings:crimson;
+@font-face {
+  font-family: 'Zelda';
+  src: url('../fonts/font_zelda.woff2') format('woff2'),
+       url('../fonts/font_zelda.woff') format('woff'); 
+  font-weight: normal;
+  font-style: normal;
+
 }
 
+:root {
+  --font-site: 'Zelda', sans-serif, Arial;
+  --color-headings:crimson;
+	
+	--dialog-gradient: linear-gradient(#000c, #0009 60%, #0000);
+	--dialog-clr:white;
+	--dialog-shadow:0 0 1em #000;
+	
+	--dialog-button-clr:white;
+	--dialog-button-border:solid .1em var(--dialog-button-clr);
+}
 
 /********************/
 /* ALGEMENE STYLING */
 /********************/
 
 body {
+  margin:0;
+  background-color: black;
   height:100vh;
   display:grid;
   grid-template-rows: 1fr minmax(0, max-content) 1fr;
@@ -38,15 +52,78 @@ body {
 
 h1 {
   color:var(--color-headings);
+  font-weight: bold;
+  font-size: xxx-large;
+
   margin:0;
-  padding-top: 1.2em;
+  padding-top: .7em;
 
   display: flex;
   justify-content: center;
 }
 
+h2 {
+  color:var(--color-headings);
+  font-weight: bold;
+  font-size: xxx-large;
+}
+
 main {
   padding-bottom:4.5em;
+}
+
+/***********************************/
+/** THE CSS FOR THE INTRO DIALOG **/
+/**********************************/
+
+/* the box */
+#intro_dialog {
+	width:16em;
+	aspect-ratio:1/1; /* vierkant */
+	padding:0;
+	
+	background-image:url(../images/zelda_introdia.jpeg);
+	background-size:cover;
+	border:none;
+	box-shadow:0 0 1em #000;
+}
+
+/* translucent layer covering the page */
+/* is part of the dialog element */
+#intro_dialog::backdrop {
+  backdrop-filter:blur(2em) brightness(.6);
+}
+
+/* dialog content */
+#intro_dialog form {	
+	height:100%;
+	padding:1em;
+	
+	display:flex;
+	flex-direction:column;
+	gap:8.7em;
+}
+
+#intro_dialog form h2 {
+	margin:0;
+	text-align:center;
+  font-size: xx-large;
+}
+
+#intro_dialog form button {
+	padding-top:.15em;
+	
+	appearance:none;
+	border:none;
+	
+	font-size:2em;
+  background-image: linear-gradient(to bottom, #8B4513, #D2B48C);
+}
+
+
+/* page does not scroll if dialog is shown */
+html:has(#intro_dialog[open]) {
+  overflow: hidden;
 }
 
 /* de lege container waarin de background image aangepast wordt */
@@ -63,7 +140,7 @@ main {
   z-index: -1;
   background-repeat: no-repeat;
   background-size: cover;
-  opacity: .3;
+  opacity: .2;
   transition: background-image 1s ease-in-out;
 }
 
@@ -80,16 +157,19 @@ main {
 }
 
 .bg-container[data-map="image4"] {
-  background-image: url(../images/map-4.jpeg);
+  background-image: url(../images/map-4.png);
 }
 
 .bg-container[data-map="image5"] {
   background-image: url(../images/map-5.png);
 }
 
-/* List items platenalbums */
 
-ol {
+/******************************/
+/** LIST ITEMS PLATENALBUMS **/
+/*****************************/
+
+.albums {
   width: 100vw;
   padding: 4.5em calc(50vw - 15em) 0;
   margin: 0;
@@ -139,8 +219,8 @@ nav a {
   height:100%;
 
   text-decoration: none;
-	color: blueviolet;
-  background-color: yellow;
+	background-image: linear-gradient(to bottom, #316570, #97C8D9);
+  color: #97C8D9;
 	border-radius: 50%;
   outline: none;
 	box-shadow: inset 0 0 0 1px currentColor;
@@ -149,8 +229,12 @@ nav a {
 }
 
 nav a:hover {
-  color: yellow;
-  background-color: blueviolet;
+  background-image: linear-gradient(to top, #316570, #97C8D9);
+  color: #316570;
+}
+
+nav a[aria-current="true"] {
+  color: white;
 }
 
 /* De list items afbeeldingen en de bijhorende hover functie
@@ -172,23 +256,23 @@ li button {
 }
 
 .cover1 {
-  background-image: url("../images/favicon.svg");
+  background-image: url("../images/zelda_1986_cover.png");
 }
 
 .cover2 {
-  background-image: url("../images/favicon.svg");
+  background-image: url("../images/zelda_1998_cover.png");
 }
 
 .cover3 {
-  background-image: url("../images/favicon.svg");
+  background-image: url("../images/zelda_2006_cover.png");
 }
 
 .cover4 {
-  background-image: url("../images/favicon.svg");
+  background-image: url("../images/zelda_2011_cover.png");
 }
 
 .cover5 {
-  background-image: url("../images/favicon.svg");
+  background-image: url("../images/zelda_20172022_cover.png");
 }
 
 
@@ -200,4 +284,399 @@ li button {
 
 li:has(.cover1:hover, .cover2:hover, .cover3:hover, .cover4:hover, .cover5:hover) .plaat {
   transform: translateY(-4.5em);
+}
+
+/*********************/
+/* THE DIALOGS PUZZEL*/
+/*********************/
+
+/* the box */
+.elements {
+	/* width:calc( 100vw - min(5vw, 3rem) ); */
+	/* height:calc( 100vh - min(5vw, 3rem) ); */
+  width:30em;
+  height:30em;
+
+	padding:0;
+	
+	border:none;
+	box-shadow:var(--dialog-shadow);
+
+  transition: 1s;
+}
+
+.elements::after {
+  content:"";
+  position:absolute;
+  inset:0;
+  background-color: black;
+  transition: 1s;
+  pointer-events:none;
+}
+
+.elements * {
+  opacity:0;
+  transition:opacity .3s 1s ;
+}
+
+.elements.big {
+  width:calc( 100vw - min(5vw, 3rem) );
+	height:calc( 100vh - min(5vw, 3rem) );
+}
+
+.elements.big::after {
+  opacity:0;
+}
+
+.elements.big * {
+  opacity:1;
+}
+
+
+/* translucent layer covering the page */
+/* is part of the dialog element */
+.elements::backdrop {
+  backdrop-filter:blur(2em);
+}
+
+/* #elements form {	
+	background-image: url("../images/background_puzzel.png");
+} */
+
+/* div met daarin h2 en p */
+.elements form div {
+	display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 30vh;
+
+
+	z-index:100;
+	min-height:12em;
+	padding:2em 2em 2em 2em;
+}
+
+
+.elements form h2,
+.elements form p {
+	margin:0;
+	max-width:32em;
+}
+
+.elements form img {
+	position:absolute;
+	top:0;
+	left:0;
+	height:100%;
+	width:100%;
+	object-fit:cover;
+	object-position:center;
+}
+
+/* sluit button */
+.elements .sluit {
+	position:absolute;
+	left:.5em;
+	top:.5em;
+	z-index:200;
+	
+	width:1.5em;
+  height:1.5em;
+
+	appearance:none;
+	background:none;
+	border:solid .1em black;
+	
+	font-size:2em;
+	font-weight:bold;
+	color:black;
+}
+
+/* BUTTON PUZZEL 1 */
+
+.elements .go_info1 {
+	position:absolute;
+	left:39em;
+	top:5em;
+	z-index:200;
+	
+	width:14em;
+  height:14em;
+
+  background-image: url(../images/steen_puzzel1.png);
+
+}
+
+.animate-move1 {
+  animation: moveButton1 2s;
+}
+
+@keyframes moveButton1 {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(11em);
+  }
+}
+
+/* BUTTON PUZZEL 2 */
+
+.elements .go_info2 {
+  position: absolute;
+  left: 40em;
+  top: 10em;
+  z-index: 200;
+  width: 10em;
+  height: 10em;
+}
+
+.elements .go_info2::before {
+  content: "";
+  position: absolute;
+  top: 4em;
+  left: 2em;
+  width: 4em;
+  height: 8em;
+  background-image: url(../images/key_puzzel2.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.elements .go_info2::after {
+  content: "";
+  position: absolute;
+  top: 3em;
+  left: 0;
+  width: 9em;
+  height: 9em;
+  background-image: url(../images/chest_puzzel2.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.elements .go_info2.animate-move2::before {
+  animation: moveButton2 1.7s;
+}
+
+
+@keyframes moveButton2 {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-9em);
+  }
+}
+
+/* BUTTON PUZZEL 3 */
+
+.elements .go_info3 {
+  position: absolute;
+  left: 40em;
+  top: 10em;
+  z-index: 200;
+  width: 10em;
+  height: 10em;
+}
+
+.elements .go_info3::before {
+  content: "";
+  position: absolute;
+  top: 14em;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/monster_2006.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.elements .go_info3::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 1em;
+  width: 8em;
+  height: 8em;
+  background-image: url(../images/zelda_toverstaf.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.elements .go_info3.animate-move3::before {
+  animation: moveButton3 1.7s;
+}
+
+
+@keyframes moveButton3 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(90deg);
+  }
+}
+
+/* BUTTON PUZZEL 4 */
+
+.elements .go_info4 {
+  position: absolute;
+  left: 40em;
+  top: 10em;
+  z-index: 200;
+  width: 10em;
+  height: 10em;
+}
+
+.elements .go_info4::before {
+  content: "";
+  position: absolute;
+  top: -5em;
+  left: -19em;
+  width: 50em;
+  height: 50em;
+  background-image: url(../images/fire_puzzel4.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.elements .go_info4::after {
+  content: "";
+  position: absolute;
+  top: 15em;
+  left: 30em;
+  width: 10em;
+  height: 10em;
+  background-image: url(../images/lever_puzzel4.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.elements .go_info4.animate-move4::before {
+  animation: moveButton4 1.7s;
+}
+
+
+@keyframes moveButton4 {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* BUTTON PUZZEL 5 */
+
+.elements .go_info5 {
+	position:absolute;
+	left:42em;
+	top:5em;
+	z-index:200;
+	
+	width:8em;
+  height:11em;
+
+  background-image: url(../images/zelda_1986.png);
+
+}
+
+.animate-move5 {
+  animation: moveButton5 2s;
+}
+
+@keyframes moveButton5 {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(25em);
+  }
+}
+
+
+/* page does not scroll if dialog is shown */
+html:has(.elements[open]) {
+  overflow: hidden;
+}
+
+/*********************/
+/* THE DIALOGS INFO*/
+/*********************/
+
+/* the box */
+.informations {
+	width:calc( 100vw - min(5vw, 3rem) );
+	height:calc( 100vh - min(5vw, 3rem) );
+	padding:0;
+	
+	border:none;
+	box-shadow:var(--dialog-shadow);
+  background-color: #316570;
+}
+
+
+/* translucent layer covering the page */
+/* is part of the dialog element */
+.informations::backdrop {
+  backdrop-filter:blur(2em);
+}
+
+/* div met daarin h2 en p */
+.informations form div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 75vh;
+  z-index: 100;
+  min-height: 12em;
+  padding: 2em 5em 2em 2em;
+}
+
+.informations form h2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #9FC184;
+}
+
+.informations form p {
+  font-size: x-large;
+  color: black;
+
+  margin-top: 10em;
+  padding-left: 4em;
+}
+
+.informations form img {
+  margin-top: 13em;
+  padding-left: 5em;
+  padding-right: 2em;
+
+  height: 100%;
+  width: auto;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* sluit button */
+.informations .sluit {
+	position:absolute;
+	left:1em;
+	top:1em;
+	z-index:200;
+	
+	width:1.5em;
+  height:1.5em;
+
+	appearance:none;
+	background:none;
+	border:solid .1em black;
+	
+	font-size:2em;
+	font-weight:bold;
+	color:black;
 }
