@@ -52,7 +52,7 @@ Ik heb al wat mogen coderen, maar toch blijf ik dit erg lastig vinden. Daarom is
 ## Voortgang/Feedback 1
 
 <details>
-  <summary>Mijn bevindingen + wijzigingen (minimaal 5)</summary>
+  <summary>Mijn bevindingen + wijzigingen</summary>
 
   ### Bevinding 1:
   Tatum: Je zou eventueel concept 1 en concept 2 combineren, maar ik zou sws voor concept 2 gaan want ik vind het idee met de nummers op de achtergrond heel erg leuk!
@@ -85,7 +85,8 @@ Ik heb al wat mogen coderen, maar toch blijf ik dit erg lastig vinden. Daarom is
 ## Voortgang/Feedback 2
 
 <details>
-  <summary>Mijn bevindingen + wijzigingen (minimaal 5)</summary>
+  <summary>Mijn bevindingen + wijzigingen</summary>
+  <img src="readme-images/schetsen-concept.png" width="375px" alt="eerste versie/schets">
   
   ### Bevinding 1:
   Omschrijving van wat er nog niet orde was (tekst en afbeeding(en)).
@@ -114,7 +115,7 @@ Ik heb al wat mogen coderen, maar toch blijf ik dit erg lastig vinden. Daarom is
 ## Voortgang/Feedback 3
 
 <details>
-  <summary>Mijn bevindingen + wijzigingen (minimaal 5)</summary>
+  <summary>Mijn bevindingen + wijzigingen</summary>
   
   ### Bevinding 1:
   Omschrijving van wat er nog niet orde was (tekst en afbeeding(en)).
@@ -171,8 +172,14 @@ Ik heb al wat mogen coderen, maar toch blijf ik dit erg lastig vinden. Daarom is
 
 Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg).
 
-1. bron 1
-2. bron 2
-3. ...
+1. https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+2. https://codepen.io/shooft/pen/abmLPwy
+3. https://nl.wikipedia.org/wiki/Langspeelplaat (voor afbeelding)
+4. https://github.com/Jobbie20/VIDii (voor inspiratie plaatjes)
+5. https://codepen.io/shooft/pen/LYgxoMO
+6. https://codepen.io/shooft/pen/jOeyxev
+7. https://codepen.io/shooft/pen/PoyWMWb
+8. https://fontmeme.com/fonts/the-wild-breath-of-zelda-font/#previewtool
+9. 
 
 </details>
